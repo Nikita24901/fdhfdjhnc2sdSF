@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  font-family: monospace;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ОСНОВНОЙ ЭКРАН */
+#screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#text {
+  font-size: 3rem;
+  max-width: 80%;
+  line-height: 1.3;
+}
+
+#buttons {
+  margin-top: 40px;
+}
+
+button {
+  background: black;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+#sub {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ПРОДОЛЖИТЬ */
+#continue {
+  margin-top: 60px;
+  font-size: 1.2rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 4s;
+}
+
+#continue.show {
+  opacity: 1;
+}
+
+/* СКРИМЕР */
+#screamer {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9999;
+  animation: flash 0.06s infinite;
+}
+
+#screamer img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+/* ГЛИТЧ */
+.glitch {
+  animation: glitch 0.08s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  25% { transform: translate(2px, -2px); }
+  50% { transform: translate(-2px, 2px); }
+  75% { transform: translate(2px, 2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes flash {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+
+/* ЧЁРНЫЙ ЭКРАН */
+#black {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 20;
+}
+
+/* ТИТРЫ */
+#credits {
+  position: fixed;
+  inset: 0;
+  background: black;
+  overflow: hidden;
+  z-index: 30;
+}
+
+.credits-content {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: scroll 40s linear forwards;
+}
+
+.credits-content p {
+  font-size: 2rem;
+  margin: 60px 0;
+}
+
+.credits-content img {
+  max-width: 30%;
+  margin: 40px auto;
+  display: block;
+  opacity: 0.9;
+}
+
+@keyframes scroll {
+  from { transform: translateY(-50%); }
+  to { transform: translateY(-250%); }
+}
+
+/* МОБИЛЬНАЯ БЛОКИРОВКА */
+#mobile-block {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  #screen, #screamer, #credits, #black {
+    display: none !important;
+  }
+
+  #mobile-block {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px;
+  }
+}
