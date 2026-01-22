@@ -17,11 +17,29 @@
 
   <div id="sub" class="hidden"></div>
 
+  <!-- PASSWORD GAME -->
+  <div id="password-game" class="hidden">
+    <div class="pwd-box">
+      <input id="password-input" placeholder="Введи пароль">
+      <button id="pwd-check">ПРОВЕРИТЬ</button>
+      <div id="pwd-error" class="hidden">НЕПРАВИЛЬНО</div>
+    </div>
+
+    <div id="hints">
+      <button id="hint1" class="hidden">Подсказка 1</button>
+      <button id="hint2" class="hidden">Подсказка 2</button>
+    </div>
+
+    <img id="hint-img1" class="hidden" src="hint1.png">
+    <img id="hint-img2" class="hidden" src="hint2.png">
+  </div>
+
+
   <div id="continue" class="hidden">ПРОДОЛЖИТЬ</div>
 </div>
 
 <div id="screamer" class="hidden">
-  <img src="monika.png" alt="">
+  <img src="monika.png">
 </div>
 
 <div id="black" class="hidden"></div>
@@ -29,16 +47,124 @@
 <div id="credits" class="hidden">
   <div class="credits-content">
     <p>Ты дошёл до конца</p>
-    <img src="photo1.jpg">
+    <img src="photo1.png" class="credits-img left">
+
     <p>Это было не случайно</p>
-    <img src="photo2.jpg">
-    <p>С днём рождения 🎉</p>
+    <img src="photo2.png" class="credits-img right">
+
+    <p>Потому что ты</p>
+    <img src="photo3.png" class="credits-img left">
+
+    <p>Лох</p>
+    <img src="photo4.png" class="credits-img right">
+
+    <p>Но это нормально</p>
+    <img src="photo5.png" class="credits-img left">
+
+    <p>Все мы такие</p>
+    <img src="photo6.png" class="credits-img right">
+
+    <p>Сякие</p>
+    <img src="photo7.png" class="credits-img right">
+
+    <p>Эпштейн</p>
+    <img src="8.png" class="credits-img right">
+
+    <p>Тралалей</p>
+    <img src="9.png" class="credits-img right">
+
+    <p>Короче</p>
+    <img src="10.png" class="credits-img right">
+
+    <p>Да</p>
+    <img src="11.png" class="credits-img right">
+
+    <p>Пизда</p>
+    <img src="12.png" class="credits-img right">
+
+    <p>Подходим мы к концу</p>
+    <img src="13.png" class="credits-img right">
+
+    <p>Потому что мы друзья</p>
+    <img src="14.png" class="credits-img right">
+
+    <p>С днём рождения, Эрмин</p>
+  </div>
+</div>
+
+<div id="mobile-block">
+  НА ТЕЛЕФОНЕ НЕЛЬЗЯ<br>
+  ЗАХОДИ С КОМПЬЮТЕРА<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>...</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="screen">
+  <div id="text"></div>
+
+  <div id="buttons" class="hidden">
+    <button id="yes">ДА</button>
+    <button id="no">НЕТ</button>
+  </div>
+
+  <div id="sub" class="hidden"></div>
+
+  <!-- PASSWORD GAME -->
+  <div id="password-game" class="hidden">
+    <div class="pwd-box">
+      <input id="password-input" placeholder="Введи пароль">
+      <button id="pwd-check">ПРОВЕРИТЬ</button>
+      <div id="pwd-error" class="hidden">НЕПРАВИЛЬНО</div>
+    </div>
+
+    <div id="hints">
+      <button id="hint1" class="hidden">Подсказка 1</button>
+      <button id="hint2" class="hidden">Подсказка 2</button>
+    </div>
+
+    <img id="hint-img1" class="hidden" src="hint1.png">
+    <img id="hint-img2" class="hidden" src="hint2.png">
+  </div>
+
+  <!-- SLIDER GAME (НЕ ИСПОЛЬЗУЕТСЯ, НО ОСТАВЛЕН) -->
+  <div id="slider-game" class="hidden"></div>
+
+  <div id="continue" class="hidden">ПРОДОЛЖИТЬ</div>
+</div>
+
+<div id="screamer" class="hidden">
+  <img src="monika.png">
+</div>
+
+<div id="black" class="hidden"></div>
+
+<div id="credits" class="hidden">
+  <div class="credits-content">
+    <p>Ты дошёл до конца</p>
+    <p>Потому что ты</p>
+    <p>Лох</p>
+    <p>Но это нормально</p>
+    <p>С днём рождения, Эрмин</p>
   </div>
 </div>
 
 <div id="mobile-block">
   НА ТЕЛЕФОНЕ НЕЛЬЗЯ<br>
   ЗАХОДИ С КОМПЬЮТЕРА
+</div>
+
+<audio id="typeSound" src="type.mp3"></audio>
+<audio id="scream" src="scream.mp3"></audio>
+<audio id="continueSound" src="continue.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 </div>
 
 <audio id="typeSound" src="type.mp3"></audio>
